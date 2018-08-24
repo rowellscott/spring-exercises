@@ -1,0 +1,9 @@
+package data;
+
+public class Movie {
+	private long id;
+	private String title;
+	private String leadActor;
+	
+	Movie(long id, String title, String leadActor){}
+}

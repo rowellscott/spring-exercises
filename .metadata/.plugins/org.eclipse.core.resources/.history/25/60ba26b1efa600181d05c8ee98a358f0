@@ -1,0 +1,5 @@
+package consumingRest;
+
+public class Quote {
+
+}

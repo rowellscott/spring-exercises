@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Currency Conversion Tool</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<p th:text="'Account #' + ${account1} + ' - ' + ${firstName1} + ' ' + ${lastName1} + ' - Account Value = $' + ${value1}" />
+	<p th:text="'Account #' + ${account2} + ' - ' + ${firstName2} + ' ' + ${lastName2} + ' - Account Value = $' + ${value2}" />
+	<p th:text="'Account #' + ${account3} + ' - ' + ${firstName3} + ' ' + ${lastName3} + ' - Account Value = $' + ${value3}" />
+	<p th:text="'Account #' + ${account4} + ' - ' + ${firstName4} + ' ' + ${lastName4} + ' - Account Value = $' + ${value4}" />
+	<p th:text="'Account #' + ${account5} + ' - ' + ${firstName5} + ' ' + ${lastName5} + ' - Account Value = $' + ${value5}" />
+</body>
+</html>

@@ -1,0 +1,38 @@
+package data;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+import hello.Application;
+
+@SpringBootApplication
+public class Application {
+	
+	private static final Logger log = LoggerFactory.getLogger(Application.class);
+	
+	public static void main(String[] args) {
+		SpringApplication.run(Application.class);
+	}
+	
+	@Bean
+	public CommandLineRunner demo(MovieRepository repository) {
+		return (args) -> {
+			repository.save("Mission Impossible", "Tom Cruise");
+			repository.save("Shawshank Redemption", "Tim Robbins");
+			repository.save("Dumb and Dumber", "Jim Carrey");
+			repository.save("Top Gun", "Tom Cruise");
+			
+			log.info("All Movies");
+			log.info("----------");
+			for(Movie movie: repository.findAll()) {
+				log.info(movie.toString())
+			}
+		}
+	}
+
+}

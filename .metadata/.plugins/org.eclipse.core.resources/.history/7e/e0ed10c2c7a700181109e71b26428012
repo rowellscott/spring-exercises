@@ -1,0 +1,13 @@
+package currency;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;   
+
+
+@JsonIgnoreProperties(ignoreUnknown = true) 
+public class CurrencyBase {
+	String base;
+	String date;
+	Rates rates;
+	
+	public CurrencyBase() {}
+}

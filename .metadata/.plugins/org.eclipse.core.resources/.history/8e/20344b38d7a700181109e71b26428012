@@ -1,0 +1,53 @@
+package currency;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.client.RestTemplate;
+
+@Controller
+public class CurrencyController {
+
+	@Autowired
+	RestTemplate restTemplate;
+
+	@Autowired
+	ClientRepository repository;
+
+	@GetMapping("")
+	public String index(Model model) {
+		restTemplate.getForObject("https://api.exchangeratesapi.io/latest", CurrencyBase.class);
+
+		repository.findAll().forEach(client -> {
+			model.addAttribute("firstName" + client.getAccountNum(), client.getFirstName());
+			model.addAttribute("lastName" + client.getAccountNum(), client.getLastName());
+			model.addAttribute("account" + client.getAccountNum(), client.getAccountNum());
+			model.addAttribute("value" + client.getAccountNum(), client.getAccountValue());
+
+		});
+
+		return "index";
+	}
+	
+	@GetMapping("/conversion/{accountNum}")
+	public String conversion(@PathVariable("accountNum") Integer id, Model model) {
+		CurrencyBase rates = restTemplate.getForObject("https://api.exchangeratesapi.io/latest?base=USD", CurrencyBase.class);
+		double euroRate = rates.getRates().getEUR();
+		double cadRate = rates.getRates().getCAD();
+		double clientAccountValue;
+		
+		repository.findById((long) id).ifPresent(client -> {		
+		
+		double euroValue = client.getAccountValue() * euroRate;
+		double cadValue = client.getAccountValue() * cadRate;
+		
+		model.addAttribute("EUR", euroValue);
+		model.addAttribute("CAD", euroValue);
+		
+		});
+		
+		return "conversion";
+	}
+}

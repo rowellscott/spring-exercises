@@ -1,0 +1,16 @@
+package movies;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+public class MovieController {
+	
+	@GetMapping("/movie")
+	public String movie(@RequestParam(name="name", required=false, defaultValue="Enter a movie into the query string") String name, Model model) {
+		model.addAttribute("name", name);
+		return "movie";
+	}
+}

@@ -1,0 +1,8 @@
+package hello;
+
+public class Application {
+	public static void main(String[] args) {
+		 List<Object[]> splitUpNames = Arrays.asList("John Woo", "Jeff Dean", "Josh Bloch", "Josh Long").stream()
+	                .map(name -> name.split(" "))
+	                .collect(Collectors.toList());
+	}

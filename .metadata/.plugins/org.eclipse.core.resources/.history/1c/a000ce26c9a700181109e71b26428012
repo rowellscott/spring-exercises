@@ -1,0 +1,73 @@
+package currency;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Rates {
+	
+	private Double USD;
+	private Double CAD;
+	private Double GBP;
+	private Double CHF;
+	private Double SEK;
+	
+	public Rates(){
+		
+	}
+
+	public Double getEUR() {
+		return EUR;
+	}
+
+	public Double getUSD() {
+		return USD;
+	}
+
+	public Double getCAD() {
+		return CAD;
+	}
+
+	public Double getGBP() {
+		return GBP;
+	}
+
+	public Double getCHF() {
+		return CHF;
+	}
+
+	public Double getSEK() {
+		return SEK;
+	}
+
+	public void setEUR(Double eUR) {
+		EUR = eUR;
+	}
+
+	public void setUSD(Double uSD) {
+		USD = uSD;
+	}
+
+	public void setCAD(Double cAD) {
+		CAD = cAD;
+	}
+
+	public void setGBP(Double gBP) {
+		GBP = gBP;
+	}
+
+	public void setCHF(Double cHF) {
+		CHF = cHF;
+	}
+
+	public void setSEK(Double sEK) {
+		SEK = sEK;
+	}
+
+	@Override
+	public String toString() {
+		return "Rates [EUR=" + EUR + ", USD=" + USD + ", CAD=" + CAD + ", GBP=" + GBP + ", CHF=" + CHF + ", SEK=" + SEK
+				+ "]";
+	}
+	
+	
+}

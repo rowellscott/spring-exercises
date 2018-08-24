@@ -1,0 +1,9 @@
+package hello;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boott.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class Application {
+
+}

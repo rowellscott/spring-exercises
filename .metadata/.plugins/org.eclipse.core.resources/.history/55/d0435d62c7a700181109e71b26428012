@@ -1,0 +1,14 @@
+package currency;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+public class Rates {
+	private Double EUR;
+	private Double USD;
+	private Double CAD;
+	private Double GBP;
+	private Double CHF;
+	private Double SEK;
+	
+	Rates(){}
+}

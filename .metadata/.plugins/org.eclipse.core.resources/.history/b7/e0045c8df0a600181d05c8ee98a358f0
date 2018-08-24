@@ -1,0 +1,7 @@
+package hello;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+public class Value {
+
+}

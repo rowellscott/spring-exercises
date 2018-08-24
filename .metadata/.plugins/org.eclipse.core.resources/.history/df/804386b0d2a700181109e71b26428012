@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Getting Started: Serving Web Content</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<p th:text="'Account #' + ${account1} + ' - ' + ${firstName1} + ' ' + ${lastName1} + ' - Account Value - ' + ${value1} />
+	<p th:text="'Hello, ' + ${firstName2} + '!'" />
+	<p th:text="'Hello, ' + ${firstName3} + '!'" />
+	<p th:text="'Hello, ' + ${firstName4} + '!'" />
+	<p th:text="'Hello, ' + ${firstName5} + '!'" />
+</body>
+</html>

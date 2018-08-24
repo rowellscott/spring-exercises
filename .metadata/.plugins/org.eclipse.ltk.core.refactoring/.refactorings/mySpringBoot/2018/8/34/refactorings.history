@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;app.HomeController&apos; to &apos;Controller&apos;&#x0A;- Original project: &apos;mySpringBoot&apos;&#x0A;- Original element: &apos;app.HomeController&apos;&#x0A;- Renamed element: &apos;app.Controller&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;HomeController&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;app{HomeController.java[HomeController" matchStrategy="1" name="Controller" qualified="false" references="true" similarDeclarations="false" stamp="1534963961614" textual="false" version="1.0"/>
+</session>

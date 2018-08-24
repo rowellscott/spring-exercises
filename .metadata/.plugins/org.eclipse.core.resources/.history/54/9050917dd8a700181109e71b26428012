@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Currency Conversion Tool</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<p
+		th:text="'Account #' + ${account1} + ' - ' + ${firstName1} + ' ' + ${lastName1} + ' - Account Value = $' + ${value1}" />
+	<a href="/conversion/${account1}">Converted Values</a>
+	<p
+		th:text="'Account #' + ${account2} + ' - ' + ${firstName2} + ' ' + ${lastName2} + ' - Account Value = $' + ${value2}" />
+	<a href="/conversion/${account2}">Converted Values</a>
+	<p
+		th:text="'Account #' + ${account3} + ' - ' + ${firstName3} + ' ' + ${lastName3} + ' - Account Value = $' + ${value3}" />
+	<a href="/conversion/${account3}">Converted Values</a>
+	<p
+		th:text="'Account #' + ${account4} + ' - ' + ${firstName4} + ' ' + ${lastName4} + ' - Account Value = $' + ${value4}" />
+	<a href="/conversion/${account4}">Converted Values</a>
+	<p
+		th:text="'Account #' + ${account5} + ' - ' + ${firstName5} + ' ' + ${lastName5} + ' - Account Value = $' + ${value5}" />
+	<a href="/conversion/${account5}">Converted Values</a>
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+package data;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GeneratedType;
+import javax.persistence.Entity;
+
+
+public class Movie {
+
+}

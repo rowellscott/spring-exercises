@@ -1,0 +1,13 @@
+package data;
+
+public class Movie {
+	private long id;
+	private String title;
+	private String leadActor;
+	
+	Movie(long id, String title, String leadActor){
+		this.id = id;
+		this.title = titie;
+		this.leadActor = leadActor
+	}
+}

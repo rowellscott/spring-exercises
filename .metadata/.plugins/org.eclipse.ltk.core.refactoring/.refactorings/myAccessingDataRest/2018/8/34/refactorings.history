@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;data.Movie.java&apos; to &apos;MovieRepository.java&apos;&#x0A;- Original project: &apos;myAccessingDataRest&apos;&#x0A;- Original element: &apos;data.Movie.java&apos;&#x0A;- Renamed element: &apos;data.MovieRepository.java&apos;" description="Rename compilation unit &apos;Movie.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java&lt;data{Movie.java" name="MovieRepository.java" references="false" stamp="1535056272239" version="1.0"/>
+</session>

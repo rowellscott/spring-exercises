@@ -1,0 +1,51 @@
+package currency;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.client.RestTemplateBuilder;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.RestTemplate;
+
+@SpringBootApplication
+public class Application {
+	private static final Logger log = LoggerFactory.getLogger(Application.class);
+
+	public static void main(String args[]) {
+		SpringApplication.run(Application.class);
+	}
+	
+	@Bean
+	public RestTemplate restTemplate(RestTemplateBuilder builder) {
+		return builder.build();
+	}
+	
+	@Bean 
+	public CommandLineRunner run(RestTemplate restTemplate, ClientRepository repository) throws Exception{
+		return args -> {
+			CurrencyBase currencyBase = restTemplate.getForObject(
+					"https://api.exchangeratesapi.io/latest", CurrencyBase.class);
+			log.info(currencyBase.toString());
+			
+			
+			repository.save(new Client("John", "Smith", 52505.60));
+			repository.save(new Client("Jake", "Williams", 34755.50));
+			repository.save(new Client("Jack", "Tan", 3456.67));
+			repository.save(new Client("Joe", "Morello", 1000355.30));
+			repository.save(new Client("Jim", "Schmidt", 67825.60));
+			
+			log.info("All Clients");
+			log.info("---------------------------------------------------");
+			repository.findAll().forEach(client -> log.info(client.toString()));
+			
+			log.info("Clients");
+			log.info("---------------------------------------------------");
+			repository.findAll().forEach(client -> log.info(client.toString()));
+			
+			
+			
+		};
+	}
+}

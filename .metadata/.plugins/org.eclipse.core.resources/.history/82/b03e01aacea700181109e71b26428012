@@ -1,0 +1,7 @@
+package currency;
+
+import org.springframework.sterotype.Controller;
+
+public class CurrencyController {
+
+}

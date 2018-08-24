@@ -1,0 +1,17 @@
+package currency;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class CurrencyController {
+	
+	@Autowired
+	RestTemplate restTemplate;
+	
+	@GetMapping("/")
+	public CurrencyBase index(Model model) {
+		return restTemplate.getForObject("https://api.exchangeratesapi.io/latest", CurrencyBase.class);
+	}
+}
